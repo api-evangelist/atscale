@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/atscale/main/json-schema/atscale-post-v1-v1-id-request-schema.json",
+  "title": "PostV1V1IdRequest",
+  "x-generated": "2026-09-26",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/atscale-openapi-generated.yml#/components/schemas/PostV1V1IdRequest",
+  "type": "object",
+  "properties": {
+    "language": {
+      "type": "string",
+      "description": "Possible values: [ SQL ]"
+    },
+    "query": {
+      "type": "string",
+      "description": "Possible values: non-empty"
+    },
+    "fakeResults": {
+      "type": "boolean"
+    },
+    "dryRun": {
+      "type": "boolean"
+    },
+    "useLocalCache": {
+      "type": "boolean"
+    },
+    "useAggregateCache": {
+      "type": "boolean"
+    },
+    "timeout": {
+      "type": "string",
+      "description": "Possible values: non-empty"
+    },
+    "context": {
+      "type": "object"
+    },
+    "environment": {
+      "type": "object"
+    },
+    "id": {
+      "type": "string",
+      "description": "Possible values: non-empty"
+    },
+    "project": {
+      "type": "object"
+    },
+    "name": {
+      "type": "string",
+      "description": "Possible values: non-empty"
+    },
+    "aggregation": {
+      "type": "object"
+    },
+    "useAggregates": {
+      "type": "boolean"
+    },
+    "genAggregates": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "language",
+    "query",
+    "fakeResults",
+    "dryRun",
+    "useLocalCache",
+    "useAggregateCache",
+    "timeout",
+    "context",
+    "environment",
+    "id",
+    "project",
+    "name",
+    "aggregation",
+    "useAggregates",
+    "genAggregates"
+  ]
+}

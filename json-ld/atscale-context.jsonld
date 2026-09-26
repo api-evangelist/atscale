@@ -1,0 +1,323 @@
+{
+  "@context": {
+    "@vocab": "https://atscale.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "atscale": "https://atscale.com/schema#",
+    "GetApi10OrgDefaultDefaultidResponse": "atscale:GetApi10OrgDefaultDefaultidResponse",
+    "id": {
+      "@id": "atscale:id",
+      "@type": "xsd:string"
+    },
+    "name": {
+      "@id": "atscale:name",
+      "@type": "xsd:string"
+    },
+    "GetOrgResponse": "atscale:GetOrgResponse",
+    "status": {
+      "@id": "atscale:status"
+    },
+    "response": {
+      "@id": "atscale:response",
+      "@container": "@list"
+    },
+    "PostOrgResponse": "atscale:PostOrgResponse",
+    "DeleteOrgOrgidResponse": "atscale:DeleteOrgOrgidResponse",
+    "PostOrgOrgidRequest": "atscale:PostOrgOrgidRequest",
+    "body": {
+      "@id": "atscale:body",
+      "@type": "xsd:string"
+    },
+    "PostOrgOrgidResponse": "atscale:PostOrgOrgidResponse",
+    "GetOrgOrgidWebhooksResponse": "atscale:GetOrgOrgidWebhooksResponse",
+    "PostOrgOrgidWebhooksRequest": "atscale:PostOrgOrgidWebhooksRequest",
+    "org_id": {
+      "@id": "atscale:org_id",
+      "@type": "xsd:string"
+    },
+    "notification_type": {
+      "@id": "atscale:notification_type",
+      "@type": "xsd:string"
+    },
+    "url": {
+      "@id": "atscale:url",
+      "@type": "xsd:string"
+    },
+    "project_id": {
+      "@id": "atscale:project_id",
+      "@type": "xsd:string"
+    },
+    "PostOrgOrgidWebhooksResponse": "atscale:PostOrgOrgidWebhooksResponse",
+    "time_to_process": {
+      "@id": "atscale:time_to_process",
+      "@type": "xsd:string"
+    },
+    "DeleteOrgOrgidWebhooksHookidResponse": "atscale:DeleteOrgOrgidWebhooksHookidResponse",
+    "GetOrgsResponse": "atscale:GetOrgsResponse",
+    "created": {
+      "@id": "atscale:created",
+      "@type": "xsd:decimal"
+    },
+    "updated": {
+      "@id": "atscale:updated",
+      "@type": "xsd:decimal"
+    },
+    "GetSessiontokenResponse": "atscale:GetSessiontokenResponse",
+    "status.i18n_message": {
+      "@id": "atscale:status.i18n_message",
+      "@type": "xsd:string"
+    },
+    "status.message": {
+      "@id": "atscale:status.message",
+      "@type": "xsd:string"
+    },
+    "response.user_id": {
+      "@id": "atscale:response.user_id",
+      "@type": "xsd:string"
+    },
+    "response.generated_at": {
+      "@id": "atscale:response.generated_at",
+      "@type": "xsd:string"
+    },
+    "DeleteV1AggregatesDefinitionsDefinitionidResponse": "atscale:DeleteV1AggregatesDefinitionsDefinitionidResponse",
+    "deleted": {
+      "@id": "atscale:deleted",
+      "@type": "xsd:boolean"
+    },
+    "PutV1AggregatesDefinitionsDefinitionidDefinitionididRequest": "atscale:PutV1AggregatesDefinitionsDefinitionidDefinitionididRequest",
+    "blocked": {
+      "@id": "atscale:blocked",
+      "@type": "xsd:boolean"
+    },
+    "PutV1AggregatesDefinitionsDefinitionidDefinitionididResponse": "atscale:PutV1AggregatesDefinitionsDefinitionidDefinitionididResponse",
+    "GetV1AggregatesExportCatalogsCatalogidModelsModelidResponse": "atscale:GetV1AggregatesExportCatalogsCatalogidModelsModelidResponse",
+    "atScaleExportVersion": {
+      "@id": "atscale:atScaleExportVersion",
+      "@type": "xsd:string"
+    },
+    "exportSummary": {
+      "@id": "atscale:exportSummary"
+    },
+    "exportTimestamp": {
+      "@id": "atscale:exportTimestamp",
+      "@type": "xsd:string"
+    },
+    "exportCatalogId": {
+      "@id": "atscale:exportCatalogId",
+      "@type": "xsd:string"
+    },
+    "exportModelId": {
+      "@id": "atscale:exportModelId",
+      "@type": "xsd:string"
+    },
+    "aggregates": {
+      "@id": "atscale:aggregates"
+    },
+    "PostV1AggregatesImportCatalogsCatalogidModelsModelidRequest": "atscale:PostV1AggregatesImportCatalogsCatalogidModelsModelidRequest",
+    "PostV1AggregatesImportCatalogsCatalogidModelsModelidResponse": "atscale:PostV1AggregatesImportCatalogsCatalogidModelsModelidResponse",
+    "importCatalogId": {
+      "@id": "atscale:importCatalogId",
+      "@type": "xsd:string"
+    },
+    "modelId": {
+      "@id": "atscale:modelId",
+      "@type": "xsd:string"
+    },
+    "numberOfDefinitionsImported": {
+      "@id": "atscale:numberOfDefinitionsImported",
+      "@type": "xsd:decimal"
+    },
+    "numberOfDefinitionsIgnored": {
+      "@id": "atscale:numberOfDefinitionsIgnored",
+      "@type": "xsd:decimal"
+    },
+    "GetV1AggregatesInstancesResponse": "atscale:GetV1AggregatesInstancesResponse",
+    "data": {
+      "@id": "atscale:data",
+      "@container": "@list"
+    },
+    "total": {
+      "@id": "atscale:total",
+      "@type": "xsd:decimal"
+    },
+    "size": {
+      "@id": "atscale:size",
+      "@type": "xsd:decimal"
+    },
+    "page": {
+      "@id": "atscale:page",
+      "@type": "xsd:decimal"
+    },
+    "offset": {
+      "@id": "atscale:offset",
+      "@type": "xsd:decimal"
+    },
+    "PostV1CatalogsCatalogidModelsModelidAggregatesCreationAggreg": "atscale:PostV1CatalogsCatalogidModelsModelidAggregatesCreationAggreg",
+    "success": {
+      "@id": "atscale:success",
+      "@type": "xsd:boolean"
+    },
+    "PostV1CatalogsDeployRequest": "atscale:PostV1CatalogsDeployRequest",
+    "repoUrl": {
+      "@id": "atscale:repoUrl",
+      "@type": "xsd:string"
+    },
+    "gitToken": {
+      "@id": "atscale:gitToken",
+      "@type": "xsd:string"
+    },
+    "gitUsername": {
+      "@id": "atscale:gitUsername",
+      "@type": "xsd:string"
+    },
+    "branch": {
+      "@id": "atscale:branch",
+      "@type": "xsd:string"
+    },
+    "catalogName": {
+      "@id": "atscale:catalogName",
+      "@type": "xsd:string"
+    },
+    "catalogLabel": {
+      "@id": "atscale:catalogLabel",
+      "@type": "xsd:string"
+    },
+    "tableauServers": {
+      "@id": "atscale:tableauServers"
+    },
+    "PostV1CatalogsDeployResponse": "atscale:PostV1CatalogsDeployResponse",
+    "catalogId": {
+      "@id": "atscale:catalogId",
+      "@type": "xsd:string"
+    },
+    "tableau": {
+      "@id": "atscale:tableau"
+    },
+    "compilationWarnings": {
+      "@id": "atscale:compilationWarnings"
+    },
+    "GetV1DataWarehousesDatawarehouseidIdResponse": "atscale:GetV1DataWarehousesDatawarehouseidIdResponse",
+    "connectionId": {
+      "@id": "atscale:connectionId",
+      "@type": "xsd:string"
+    },
+    "isImpersonationEnabled": {
+      "@id": "atscale:isImpersonationEnabled",
+      "@type": "xsd:boolean"
+    },
+    "isCanaryAlwaysEnabled": {
+      "@id": "atscale:isCanaryAlwaysEnabled",
+      "@type": "xsd:boolean"
+    },
+    "isPartialAggHitEnabled": {
+      "@id": "atscale:isPartialAggHitEnabled",
+      "@type": "xsd:boolean"
+    },
+    "access": {
+      "@id": "atscale:access"
+    },
+    "database": {
+      "@id": "atscale:database",
+      "@type": "xsd:string"
+    },
+    "aggregateSchema": {
+      "@id": "atscale:aggregateSchema",
+      "@type": "xsd:string"
+    },
+    "connections": {
+      "@id": "atscale:connections",
+      "@container": "@list"
+    },
+    "PostV1QueryPlanRequest": "atscale:PostV1QueryPlanRequest",
+    "language": {
+      "@id": "atscale:language",
+      "@type": "xsd:string"
+    },
+    "query": {
+      "@id": "atscale:query",
+      "@type": "xsd:string"
+    },
+    "timeout": {
+      "@id": "atscale:timeout",
+      "@type": "xsd:string"
+    },
+    "PostV1QueryPlanResponse": "atscale:PostV1QueryPlanResponse",
+    "queryId": {
+      "@id": "atscale:queryId",
+      "@type": "xsd:string"
+    },
+    "outboundQuery": {
+      "@id": "atscale:outboundQuery",
+      "@type": "xsd:string"
+    },
+    "PostV1V1IdRequest": "atscale:PostV1V1IdRequest",
+    "fakeResults": {
+      "@id": "atscale:fakeResults",
+      "@type": "xsd:boolean"
+    },
+    "dryRun": {
+      "@id": "atscale:dryRun",
+      "@type": "xsd:boolean"
+    },
+    "useLocalCache": {
+      "@id": "atscale:useLocalCache",
+      "@type": "xsd:boolean"
+    },
+    "useAggregateCache": {
+      "@id": "atscale:useAggregateCache",
+      "@type": "xsd:boolean"
+    },
+    "context": {
+      "@id": "atscale:context"
+    },
+    "environment": {
+      "@id": "atscale:environment"
+    },
+    "project": {
+      "@id": "atscale:project"
+    },
+    "aggregation": {
+      "@id": "atscale:aggregation"
+    },
+    "useAggregates": {
+      "@id": "atscale:useAggregates",
+      "@type": "xsd:boolean"
+    },
+    "genAggregates": {
+      "@id": "atscale:genAggregates",
+      "@type": "xsd:boolean"
+    },
+    "PostV1V1IdResponse": "atscale:PostV1V1IdResponse",
+    "query-id": {
+      "@id": "atscale:query-id",
+      "@type": "xsd:string"
+    },
+    "metadata": {
+      "@id": "atscale:metadata"
+    },
+    "metadata.succeeded": {
+      "@id": "atscale:metadata.succeeded",
+      "@type": "xsd:boolean"
+    },
+    "metadata.wall-time": {
+      "@id": "atscale:metadata.wall-time",
+      "@type": "xsd:decimal"
+    },
+    "metadata.error-message": {
+      "@id": "atscale:metadata.error-message",
+      "@type": "xsd:string"
+    },
+    "metadata.columns": {
+      "@id": "atscale:metadata.columns",
+      "@container": "@list"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Atscale API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Atscale's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-09-26) from openapi/_ae-authored/atscale-openapi-generated.yml.",
+  "dcterms:created": "2026-09-26",
+  "dcterms:source": [
+    "openapi/_ae-authored/atscale-openapi-generated.yml"
+  ]
+}

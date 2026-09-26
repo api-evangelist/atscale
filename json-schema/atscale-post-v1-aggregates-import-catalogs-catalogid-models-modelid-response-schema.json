@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/atscale/main/json-schema/atscale-post-v1-aggregates-import-catalogs-catalogid-models-modelid-response-schema.json",
+  "title": "PostV1AggregatesImportCatalogsCatalogidModelsModelidResponse",
+  "x-generated": "2026-09-26",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/atscale-openapi-generated.yml#/components/schemas/PostV1AggregatesImportCatalogsCatalogidModelsModelidResponse",
+  "type": "object",
+  "properties": {
+    "atScaleExportVersion": {
+      "type": "string",
+      "description": "The AtScale system version from which the export originated."
+    },
+    "exportCatalogId": {
+      "type": "string",
+      "description": "Catalog ID"
+    },
+    "importCatalogId": {
+      "type": "string",
+      "description": "ID of the Catalog to which the file was imported."
+    },
+    "modelId": {
+      "type": "string",
+      "description": "ID of the Model containing the aggregate definitions."
+    },
+    "numberOfDefinitionsImported": {
+      "type": "number",
+      "description": "Count of aggregate definitions that were imported."
+    },
+    "numberOfDefinitionsIgnored": {
+      "type": "number",
+      "description": "Count of aggregate definitions that were not imported."
+    },
+    "aggregates": {
+      "type": "object",
+      "description": "Contains count and values arrays."
+    }
+  }
+}

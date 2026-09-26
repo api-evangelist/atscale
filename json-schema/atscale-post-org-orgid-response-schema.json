@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/atscale/main/json-schema/atscale-post-org-orgid-response-schema.json",
+  "title": "PostOrgOrgidResponse",
+  "x-generated": "2026-09-26",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/atscale-openapi-generated.yml#/components/schemas/PostOrgOrgidResponse",
+  "type": "object",
+  "properties": {
+    "200": {
+      "type": "string",
+      "description": "Success."
+    },
+    "401": {
+      "type": "string",
+      "description": "This error will occur if calling user does not have access right for the API."
+    },
+    "404": {
+      "type": "string",
+      "description": "This error will occur if the org identified by orgId does not exist."
+    },
+    "500": {
+      "type": "string",
+      "description": "A server error occurred. Check the logs for more details."
+    }
+  }
+}

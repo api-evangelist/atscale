@@ -1,0 +1,29 @@
+generated: '2026-09-26'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://documentation.atscale.com/ailink-container/release-notes
+sources:
+- https://documentation.atscale.com/ailink-container/release-notes
+- https://documentation.atscale.com/ailink-container/release-notes/3.0.0
+- https://documentation.atscale.com/ailink-installer/release-notes
+- https://documentation.atscale.com/ailink-installer/release-notes/1.0.0
+entries:
+- breaking: true
+  highlights:
+  - The removal of the Project object
+  - New objects for Catalog and Repo
+  - Removal of write functionality across all classes. This will be added back in later releases.
+  - Workflow to get a workable data model has changed.
+  date: '2024-09-13'
+- breaking: false
+  highlights:
+  - AI-Link is a Python connector empowering data driven personas to collaborate and apply the power of a semantic layer to challenges in Data
+    and Applied AI.
+  - This release allows AtScale to promote and offer a usable license of AI Link for interested customers with all the appropriate protections
+    in place.
+  - 'Documentation: User Guide updated, download/install procedure hosted in AtScale docs, Readme License file to go with AI Link wheelfile.'
+  - 'Code Updates: Compatible connectivity with Snowflake and downstream ML model for end to end data processing and inference through AI Link.'
+  date: '2022-06-01'
+current_version: 3.0.0
+note: Only entries with detailed release notes were included.
+docs: https://documentation.atscale.com/ailink-container/release-notes

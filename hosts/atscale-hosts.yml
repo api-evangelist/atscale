@@ -1,0 +1,97 @@
+generated: '2026-09-26'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 6
+  own: 5
+  other_domain: 1
+  platform: 0
+  roles:
+  - api
+  - docs
+  - other
+  - website
+hosts:
+- host: api.atscale.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: atscale.com
+  role: api
+  relation: own
+- host: atscale-node-01.docker.infra.atscale.com:10500
+  found_by:
+  - apis[]
+  types: []
+  serves:
+  - api
+  registrable_domain: atscale.com:10500
+  role: other
+  relation: other-domain
+- host: documentation.atscale.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - ChangeLog
+  - Documentation
+  serves:
+  - docs
+  registrable_domain: atscale.com
+  role: docs
+  relation: own
+- host: help.atscale.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - Support
+  - GettingStarted
+  serves:
+  - docs
+  registrable_domain: atscale.com
+  role: docs
+  relation: own
+- host: snowflake.atscale.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: atscale.com
+  role: other
+  relation: own
+- host: www.atscale.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - PrivacyPolicy
+  - Pricing
+  - Newsroom
+  - Leadership
+  - Blog
+  - Website
+  serves:
+  - cdn
+  - hosting
+  vendor: cloudflare
+  registrable_domain: atscale.com
+  role: website
+  relation: own

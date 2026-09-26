@@ -1,23 +1,141 @@
 aid: atscale
+
 name: Atscale
-description: 'Atscale is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.atscale.com/wp-content/uploads/2021/12/AtScale_Logo_RGB_2C.png
+
+description: AtScale provides a semantic layer platform that enables enterprises to unify data across data warehouses, data lakes, and cloud services,
+  delivering AI‑powered analytics, business intelligence, and data governance. Their solution supports integrations with Snowflake, Databricks,
+  Google BigQuery, Amazon Redshift, Microsoft Azure, and many other platforms, helping organizations to build a trusted analytics foundation for
+  AI and BI workloads.
+
 url: https://raw.githubusercontent.com/api-evangelist/atscale/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
-- Company
-apis: []
+- Analytics
+- Business Intelligence
+- Data Integration
+- AI
+- Semantic Layer
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Spectral
+  url: rules/atscale-rules.yml
+- type: JSONLD
+  url: json-ld/atscale-context.jsonld
+- type: Vocabulary
+  url: vocabulary/atscale-vocabulary.yml
+- type: DataModel
+  url: data-model/atscale-data-model.yml
+- type: ChangeLog
+  url: changelog/atscale-changelog.yml
+- type: Conformance
+  url: conformance/atscale-conformance.yml
+- type: LLMsTxt
+  url: llms/atscale-llms.txt
+- type: Hosts
+  url: hosts/atscale-hosts.yml
+- type: Vendors
+  url: vendors/atscale-vendors.yml
+- type: SDKs
+  url: packages/atscale-packages.yml
+- type: Packages
+  url: packages/atscale-packages.yml
+- type: Support
+  url: https://help.atscale.com/
+- type: PrivacyPolicy
+  url: https://www.atscale.com/privacy/
+- type: Pricing
+  url: https://www.atscale.com/pricing/
+- type: Newsroom
+  url: https://www.atscale.com/press/
+- type: Leadership
+  url: https://www.atscale.com/about/team/
+- type: ChangeLog
+  url: https://documentation.atscale.com/container/release-notes
+- type: Blog
+  url: https://www.atscale.com/blog/
+- type: GettingStarted
+  url: https://help.atscale.com/kb/what-access-is-needed-in-sentry-for-impala-if-udf-schema-override-is-setup-in-atscale
+- type: Documentation
+  url: https://documentation.atscale.com/
+- type: DomainSecurity
+  url: security/atscale-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/atscale
+  url: https://www.atscale.com
+
+apis:
+- name: AtScale API
+  description: API documentation is available but no machine‑readable contract was found.
+  humanURL: https://documentation.atscale.com/container/atscale
+  baseURL: null
+  x-coverage:
+    state: unreadable
+    reason: js-rendered-docs
+    detail: Documentation pages are HTML without a published OpenAPI or other spec.
+    evidence:
+    - url: https://documentation.atscale.com/container/atscale
+      status: 200
+    checked: 2026-09-26
+  aid: atscale:atscale-api-2
+- aid: atscale:atscale-api
+  name: Atscale API
+  description: 'Atscale API as documented publicly: 28 operations. Contract generated from the documentation by API Evangelist (2026-09-26); not
+
+    the provider''s own document.'
+  humanURL: https://documentation.atscale.com/container-api/Data%20Catalog%20API/request-reference
+  baseURL: http://atscale-node-01.docker.infra.atscale.com:10500
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/atscale-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-aggregates-import-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-get-v1-data-warehouses-datawarehouseid-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-get-v1-aggregates-export-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-org-orgid-response-schema.json
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-26'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://help.atscale.com/mcp
+    status: 403
+  - url: https://equityzen.com/company/atscale
+    status: 403
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 21
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/atscale/main/json-schema/atscale-get-v1-aggregates-export-catalogs-catalogid-models-modelid-response-schema.json",
+  "title": "GetV1AggregatesExportCatalogsCatalogidModelsModelidResponse",
+  "x-generated": "2026-09-26",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/atscale-openapi-generated.yml#/components/schemas/GetV1AggregatesExportCatalogsCatalogidModelsModelidResponse",
+  "type": "object",
+  "properties": {
+    "atScaleExportVersion": {
+      "type": "string",
+      "description": "The AtScale system version from which the export originated."
+    },
+    "exportSummary": {
+      "type": "object",
+      "description": "Summarized information such as aggregate count, grouped by Connection ID."
+    },
+    "exportTimestamp": {
+      "type": "string",
+      "description": "Server-generated timestamp the export file was generated."
+    },
+    "exportCatalogId": {
+      "type": "string",
+      "description": "catalog ID"
+    },
+    "exportModelId": {
+      "type": "string",
+      "description": "Model ID. Must exist on the target system."
+    },
+    "aggregates": {
+      "type": "object",
+      "description": "Aggregate Definitions. For internal use only."
+    }
+  }
+}

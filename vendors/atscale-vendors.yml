@@ -1,0 +1,68 @@
+generated: '2026-09-26'
+method: probed
+source: pre-flight dossier (docs platform, portal detections) + CNAME chains and response headers of the hosts apis.yml names
+registry: all/0-working/vendors.yml
+areas_vocabulary:
+- documentation
+- developer-portal
+- api-gateway
+- cdn
+- hosting
+- sdk-generation
+- api-collections
+- status-page
+- support
+- community
+- identity
+- mcp-hosting
+vendors:
+- vendor: cloudflare
+  name: Cloudflare
+  area: cdn
+  host: documentation.atscale.com
+  evidence: header:cf-ray
+  signal: header
+  confidence: high
+  kin_score:
+  - https_enforced
+  - hsts
+- vendor: cloudflare-pages
+  name: Cloudflare Pages
+  area: hosting
+  host: documentation.atscale.com
+  evidence: cname:pages.dev
+  signal: cname
+  confidence: high
+  kin_score: []
+- vendor: hubspot
+  name: HubSpot
+  area: hosting
+  host: help.atscale.com
+  evidence: cname:hubspot.net
+  signal: cname
+  confidence: high
+  kin_score: []
+- vendor: wpengine
+  name: WP Engine
+  area: hosting
+  host: www.atscale.com
+  evidence: header:x-powered-by:wp engine
+  signal: header
+  confidence: high
+  kin_score: []
+reliance:
+  areas_vendor_served:
+  - cdn
+  - hosting
+  vendor_count: 4
+  areas_observed: 12
+  share_of_observable_areas: 0.167
+  note: areas where a third party was DETECTED serving this provider; an area absent here was either self-run or not observed, and this script
+    cannot tell those apart
+checked:
+- 'docs-platform: no-docs-host'
+- help.atscale.com (Support)
+- help.atscale.com (GettingStarted)
+- documentation.atscale.com (Documentation)
+- www.atscale.com (Website)
+- atscale-node-01.docker.infra.atscale.com:10500 (baseURL)
