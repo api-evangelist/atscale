@@ -1,0 +1,34 @@
+{
+  "provider": "atscale",
+  "sources": [
+    "_ae-authored/atscale-openapi-generated.yml"
+  ],
+  "outputs": [
+    "atscale-aggregates-api-openapi.yml",
+    "atscale-atscale-api-api-openapi.yml",
+    "atscale-catalogs-api-openapi.yml",
+    "atscale-data-warehouses-api-openapi.yml",
+    "atscale-default-api-openapi.yml",
+    "atscale-org-api-openapi.yml",
+    "atscale-orgs-api-openapi.yml",
+    "atscale-query-api-openapi.yml",
+    "atscale-sessiontoken-api-openapi.yml",
+    "atscale-soap-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "atscale-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "atscale-openapi-generated.yml: tagged paths GET / -> Atscale API",
+    "atscale-openapi-generated.yml: tagged paths GET /api/1.0/org/ -> Org",
+    "atscale-openapi-generated.yml: tagged paths POST /api/1.0/org/default/users -> Org",
+    "atscale-openapi-generated.yml: tagged paths GET /api/1.0/org/default/{defaultid} -> Org",
+    "atscale-openapi-generated.yml: tagged paths GET /v1/{v1id} -> Atscale API",
+    "atscale-openapi-generated.yml: tagged paths POST /v1/{v1id} -> Atscale API",
+    "atscale-openapi-generated.yml: declared missing tag: Atscale API",
+    "apis.yml register: written (+10 apis, 11 total)"
+  ],
+  "skipped": []
+}

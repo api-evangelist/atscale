@@ -1,0 +1,91 @@
+openapi: 3.2.0
+info:
+  title: Atscale Orgs API
+  version: '2026-09-26'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-26: 28 operation(s) read from 34 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Atscale has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 5
+    documentation: 23
+    pages-with-code: 4
+    pages-read: 34
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-26'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://documentation.atscale.com/container-api/Data%20Catalog%20API/request-reference
+  - https://documentation.atscale.com/installer-api/Data%20Catalog%20API/request-reference
+  - https://documentation.atscale.com/installer-api/list-webhooks
+  - https://documentation.atscale.com/installer-api/create-new-webhook
+  - https://documentation.atscale.com/installer-api/delete-specific-webhook
+  - https://help.atscale.com/kb/how-to-create-edit-and-delete-a-user-with-the-api
+  - https://documentation.atscale.com/installer-api/get-org-org-id-webhooks-hook-id
+  - https://documentation.atscale.com/container/managing-atscale/managing-aggregates/rebuilding-aggregates-using-the-rest-api
+  - https://documentation.atscale.com/container-api/xmla
+  - https://documentation.atscale.com/container-api/export
+  - https://documentation.atscale.com/container-api/import
+  - https://documentation.atscale.com/installer-api/get-org
+  - https://documentation.atscale.com/installer-api/get-orgs
+  - https://documentation.atscale.com/installer-api/post-org
+  - https://documentation.atscale.com/container-api/aggregates
+  - https://documentation.atscale.com/container-api/plan-query
+  - https://documentation.atscale.com/container-api/get-catalogs
+  - https://documentation.atscale.com/container-api/submit-query
+  - https://documentation.atscale.com/container-api/exchange-token
+  - https://documentation.atscale.com/container-api/get-query-data
+  - https://documentation.atscale.com/container-api/aggregate-block
+  - https://documentation.atscale.com/container-api/create-schedule
+  - https://documentation.atscale.com/container-api/delete-schedule
+  - https://documentation.atscale.com/container-api/deploy-from-git
+  - https://documentation.atscale.com/container-api/trigger-new-job
+  - https://documentation.atscale.com/installer-api/post-org-org-id
+  - https://documentation.atscale.com/container-api/aggregate-delete
+  - https://documentation.atscale.com/container-api/get-dw-snowflake
+  - https://documentation.atscale.com/installer-api/get-sessiontoken
+  - https://documentation.atscale.com/container-api/aggregate-unblock
+  - https://documentation.atscale.com/container-api/get-catalog-repos
+  - https://documentation.atscale.com/installer-api/delete-org-org-id
+  - https://documentation.atscale.com/container-api/get-dw-data-bricks
+  - https://documentation.atscale.com/container-api/aggregate-instances
+servers:
+- url: http://atscale-node-01.docker.infra.atscale.com:10500
+security:
+- bearer: []
+tags:
+- name: Orgs
+paths:
+  /orgs:
+    get:
+      operationId: get_orgs
+      tags:
+      - Orgs
+      summary: List All Organizations
+      x-source: https://documentation.atscale.com/installer-api/get-orgs
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetOrgsResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    GetOrgsResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        created:
+          type: number
+        updated:
+          type: number
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

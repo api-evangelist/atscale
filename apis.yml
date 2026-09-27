@@ -97,30 +97,246 @@ apis:
       status: 200
     checked: 2026-09-26
   aid: atscale:atscale-api-2
-- aid: atscale:atscale-api
-  name: Atscale API
-  description: 'Atscale API as documented publicly: 28 operations. Contract generated from the documentation by API Evangelist (2026-09-26); not
-
-    the provider''s own document.'
-  humanURL: https://documentation.atscale.com/container-api/Data%20Catalog%20API/request-reference
+- aid: atscale:atscale-aggregates-api
+  name: Atscale Aggregates API
+  description: The Aggregates API from Atscale — 5 operation(s) for aggregates.
+  humanURL: https://documentation.atscale.com/container/atscale
   baseURL: http://atscale-node-01.docker.infra.atscale.com:10500
+  tags:
+  - Aggregates
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/atscale-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/atscale-aggregates-api-openapi.yml
   - type: JSONSchema
     url: json-schema/atscale-post-v1-v1-id-request-schema.json
   - type: JSONSchema
-    url: json-schema/atscale-post-v1-aggregates-import-catalogs-catalogid-models-modelid-response-schema.json
+    url: >-
+      json-schema/atscale-post-v1-aggregates-import-catalogs-catalogid-models-modelid-response-schema.json
   - type: JSONSchema
     url: json-schema/atscale-get-v1-data-warehouses-datawarehouseid-id-response-schema.json
   - type: JSONSchema
-    url: json-schema/atscale-get-v1-aggregates-export-catalogs-catalogid-models-modelid-response-schema.json
+    url: >-
+      json-schema/atscale-get-v1-aggregates-export-catalogs-catalogid-models-modelid-response-schema.json
   - type: JSONSchema
     url: json-schema/atscale-post-v1-v1-id-response-schema.json
   - type: JSONSchema
     url: json-schema/atscale-post-org-orgid-response-schema.json
-
+- aid: atscale:atscale-atscale-api-api
+  name: Atscale Atscale API
+  description: The Atscale API API from Atscale — 2 operation(s) for atscale api.
+  humanURL: https://documentation.atscale.com/container/atscale
+  baseURL: http://atscale-node-01.docker.infra.atscale.com:10500
+  tags:
+  - Atscale API
+  properties:
+  - type: OpenAPI
+    url: openapi/atscale-atscale-api-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atscale-post-v1-aggregates-import-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-get-v1-data-warehouses-datawarehouseid-id-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atscale-get-v1-aggregates-export-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-org-orgid-response-schema.json
+- aid: atscale:atscale-catalogs-api
+  name: Atscale Catalogs API
+  description: The Catalogs API from Atscale — 3 operation(s) for catalogs.
+  humanURL: https://documentation.atscale.com/container/atscale
+  baseURL: http://atscale-node-01.docker.infra.atscale.com:10500
+  tags:
+  - Catalogs
+  properties:
+  - type: OpenAPI
+    url: openapi/atscale-catalogs-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atscale-post-v1-aggregates-import-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-get-v1-data-warehouses-datawarehouseid-id-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atscale-get-v1-aggregates-export-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-org-orgid-response-schema.json
+- aid: atscale:atscale-data-warehouses-api
+  name: Atscale Data Warehouses API
+  description: The Data Warehouses API from Atscale — 1 operation(s) for data warehouses.
+  humanURL: https://documentation.atscale.com/container/atscale
+  baseURL: http://atscale-node-01.docker.infra.atscale.com:10500
+  tags:
+  - Data Warehouses
+  properties:
+  - type: OpenAPI
+    url: openapi/atscale-data-warehouses-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atscale-post-v1-aggregates-import-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-get-v1-data-warehouses-datawarehouseid-id-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atscale-get-v1-aggregates-export-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-org-orgid-response-schema.json
+- aid: atscale:atscale-default-api
+  name: Atscale Default API
+  description: The Default API from Atscale — 1 operation(s) for default.
+  humanURL: https://documentation.atscale.com/container/atscale
+  baseURL: http://atscale-node-01.docker.infra.atscale.com:10500
+  tags:
+  - Default
+  properties:
+  - type: OpenAPI
+    url: openapi/atscale-default-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atscale-post-v1-aggregates-import-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-get-v1-data-warehouses-datawarehouseid-id-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atscale-get-v1-aggregates-export-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-org-orgid-response-schema.json
+- aid: atscale:atscale-org-api
+  name: Atscale Org API
+  description: The Org API from Atscale — 7 operation(s) for org.
+  humanURL: https://documentation.atscale.com/container/atscale
+  baseURL: http://atscale-node-01.docker.infra.atscale.com:10500
+  tags:
+  - Org
+  properties:
+  - type: OpenAPI
+    url: openapi/atscale-org-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atscale-post-v1-aggregates-import-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-get-v1-data-warehouses-datawarehouseid-id-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atscale-get-v1-aggregates-export-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-org-orgid-response-schema.json
+- aid: atscale:atscale-orgs-api
+  name: Atscale Orgs API
+  description: The Orgs API from Atscale — 1 operation(s) for orgs.
+  humanURL: https://documentation.atscale.com/container/atscale
+  baseURL: http://atscale-node-01.docker.infra.atscale.com:10500
+  tags:
+  - Orgs
+  properties:
+  - type: OpenAPI
+    url: openapi/atscale-orgs-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atscale-post-v1-aggregates-import-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-get-v1-data-warehouses-datawarehouseid-id-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atscale-get-v1-aggregates-export-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-org-orgid-response-schema.json
+- aid: atscale:atscale-query-api
+  name: Atscale Query API
+  description: The Query API from Atscale — 1 operation(s) for query.
+  humanURL: https://documentation.atscale.com/container/atscale
+  baseURL: http://atscale-node-01.docker.infra.atscale.com:10500
+  tags:
+  - Query
+  properties:
+  - type: OpenAPI
+    url: openapi/atscale-query-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atscale-post-v1-aggregates-import-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-get-v1-data-warehouses-datawarehouseid-id-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atscale-get-v1-aggregates-export-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-org-orgid-response-schema.json
+- aid: atscale:atscale-sessiontoken-api
+  name: Atscale Sessiontoken API
+  description: The Sessiontoken API from Atscale — 1 operation(s) for sessiontoken.
+  humanURL: https://documentation.atscale.com/container/atscale
+  baseURL: http://atscale-node-01.docker.infra.atscale.com:10500
+  tags:
+  - Sessiontoken
+  properties:
+  - type: OpenAPI
+    url: openapi/atscale-sessiontoken-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atscale-post-v1-aggregates-import-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-get-v1-data-warehouses-datawarehouseid-id-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atscale-get-v1-aggregates-export-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-org-orgid-response-schema.json
+- aid: atscale:atscale-soap-api
+  name: Atscale Soap API
+  description: The Soap API from Atscale — 1 operation(s) for soap.
+  humanURL: https://documentation.atscale.com/container/atscale
+  baseURL: http://atscale-node-01.docker.infra.atscale.com:10500
+  tags:
+  - Soap
+  properties:
+  - type: OpenAPI
+    url: openapi/atscale-soap-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atscale-post-v1-aggregates-import-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-get-v1-data-warehouses-datawarehouseid-id-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atscale-get-v1-aggregates-export-catalogs-catalogid-models-modelid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atscale-post-org-orgid-response-schema.json
 x-coverage:
   state: none
   reason: no-developer-program

@@ -1,0 +1,430 @@
+openapi: 3.2.0
+info:
+  title: Atscale Org API
+  version: '2026-09-26'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-26: 28 operation(s) read from 34 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Atscale has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 5
+    documentation: 23
+    pages-with-code: 4
+    pages-read: 34
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-26'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://documentation.atscale.com/container-api/Data%20Catalog%20API/request-reference
+  - https://documentation.atscale.com/installer-api/Data%20Catalog%20API/request-reference
+  - https://documentation.atscale.com/installer-api/list-webhooks
+  - https://documentation.atscale.com/installer-api/create-new-webhook
+  - https://documentation.atscale.com/installer-api/delete-specific-webhook
+  - https://help.atscale.com/kb/how-to-create-edit-and-delete-a-user-with-the-api
+  - https://documentation.atscale.com/installer-api/get-org-org-id-webhooks-hook-id
+  - https://documentation.atscale.com/container/managing-atscale/managing-aggregates/rebuilding-aggregates-using-the-rest-api
+  - https://documentation.atscale.com/container-api/xmla
+  - https://documentation.atscale.com/container-api/export
+  - https://documentation.atscale.com/container-api/import
+  - https://documentation.atscale.com/installer-api/get-org
+  - https://documentation.atscale.com/installer-api/get-orgs
+  - https://documentation.atscale.com/installer-api/post-org
+  - https://documentation.atscale.com/container-api/aggregates
+  - https://documentation.atscale.com/container-api/plan-query
+  - https://documentation.atscale.com/container-api/get-catalogs
+  - https://documentation.atscale.com/container-api/submit-query
+  - https://documentation.atscale.com/container-api/exchange-token
+  - https://documentation.atscale.com/container-api/get-query-data
+  - https://documentation.atscale.com/container-api/aggregate-block
+  - https://documentation.atscale.com/container-api/create-schedule
+  - https://documentation.atscale.com/container-api/delete-schedule
+  - https://documentation.atscale.com/container-api/deploy-from-git
+  - https://documentation.atscale.com/container-api/trigger-new-job
+  - https://documentation.atscale.com/installer-api/post-org-org-id
+  - https://documentation.atscale.com/container-api/aggregate-delete
+  - https://documentation.atscale.com/container-api/get-dw-snowflake
+  - https://documentation.atscale.com/installer-api/get-sessiontoken
+  - https://documentation.atscale.com/container-api/aggregate-unblock
+  - https://documentation.atscale.com/container-api/get-catalog-repos
+  - https://documentation.atscale.com/installer-api/delete-org-org-id
+  - https://documentation.atscale.com/container-api/get-dw-data-bricks
+  - https://documentation.atscale.com/container-api/aggregate-instances
+servers:
+- url: http://atscale-node-01.docker.infra.atscale.com:10500
+security:
+- bearer: []
+tags:
+- name: Org
+paths:
+  /api/1.0/org/:
+    get:
+      operationId: get_api_1_0_org
+      tags:
+      - Org
+      summary: How to Create, Edit and Delete a User with the API
+      x-source: https://help.atscale.com/kb/how-to-create-edit-and-delete-a-user-with-the-api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/1.0/org/default/users:
+    post:
+      operationId: post_api_1_0_org_default_users
+      tags:
+      - Org
+      summary: POST /api/1.0/org/default/users
+      x-source: https://help.atscale.com/kb/how-to-create-edit-and-delete-a-user-with-the-api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X POST " http://atscale.example.com:10500/api/1.0/org/default/users" "  -H "authorization: Bearer ${BearerToken}"  -H "content-type: application/json"  -d ''{     "username" : "test-api-user",     "confirm_password" : "testpw",     "password" : "testpw",     "email" : " test-api-user@atscale.com ",     "name" : "Test API User",     "roles": ["designcenter_user"] }'' {"status":{"i18n_message":"'
+  /api/1.0/org/default/{defaultid}:
+    get:
+      operationId: get_api_1_0_org_default_defaultid
+      tags:
+      - Org
+      summary: GET /api/1.0/org/default/roles
+      x-source: https://help.atscale.com/kb/how-to-create-edit-and-delete-a-user-with-the-api
+      parameters:
+      - name: defaultid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApi10OrgDefaultDefaultidResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -X GET " http://atscale.example.com:10500/api/1.0/org/default/roles" "  -H "authorization: Bearer ${BearerToken}" {"status":{"i18n_message":"response.ok","message":"OK"},"response":{"roles":[{"id":"designcenter_user","title":"Design Center User","permissions": [{"id":"dc_user","name":"designcenter.user"}, {"id":"aggregates_view","name":"aggregates.view"}, {"id":"queries_view","name":"queries.'
+        collapsed_from: 2 example path(s) differing only at defaultId
+  /org:
+    get:
+      operationId: get_org
+      tags:
+      - Org
+      summary: List all Organizations this user has access to
+      x-source: https://documentation.atscale.com/installer-api/get-org
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetOrgResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_org
+      tags:
+      - Org
+      summary: Create a new Organization
+      x-source: https://documentation.atscale.com/installer-api/post-org
+      parameters:
+      - name: name
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Name for the new organization
+      - name: port
+        in: query
+        required: true
+        schema:
+          type: integer
+        description: Port for the new organization
+      - name: currentOrgId
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Organization to which the user making the request belongs (for example, default)
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostOrgResponse'
+      x-evidence:
+        kind: documentation
+  /org/{orgid}:
+    delete:
+      operationId: delete_org_orgid
+      tags:
+      - Org
+      summary: Delete Organization identified by orgID UUID
+      x-source: https://documentation.atscale.com/installer-api/delete-org-org-id
+      parameters:
+      - name: orgid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteOrgOrgidResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_org_orgid
+      tags:
+      - Org
+      summary: Update an existing Organization
+      x-source: https://documentation.atscale.com/installer-api/post-org-org-id
+      parameters:
+      - name: orgid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostOrgOrgidRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostOrgOrgidResponse'
+      x-evidence:
+        kind: documentation
+  /org/{orgid}/webhooks:
+    get:
+      operationId: get_org_orgid_webhooks
+      tags:
+      - Org
+      summary: This API lists webhooks
+      x-source: https://documentation.atscale.com/installer-api/list-webhooks
+      parameters:
+      - name: orgid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: projectId
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The Project Id to fetch webhooks for
+      - name: notificationType
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The Notification Type
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetOrgOrgidWebhooksResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_org_orgid_webhooks
+      tags:
+      - Org
+      summary: Create New Webhook
+      x-source: https://documentation.atscale.com/installer-api/create-new-webhook
+      parameters:
+      - name: orgid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostOrgOrgidWebhooksRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostOrgOrgidWebhooksResponse'
+      x-evidence:
+        kind: documentation
+  /org/{orgid}/webhooks/{hookid}:
+    delete:
+      operationId: delete_org_orgid_webhooks_hookid
+      tags:
+      - Org
+      summary: Deletes the webhook identified by hookId in org identified by orgId
+      x-source: https://documentation.atscale.com/installer-api/delete-specific-webhook
+      parameters:
+      - name: orgid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: hookid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteOrgOrgidWebhooksHookidResponse'
+      x-evidence:
+        kind: documentation
+    get:
+      operationId: get_org_orgid_webhooks_hookid
+      tags:
+      - Org
+      summary: Retrieve Specific Webhook
+      x-source: https://documentation.atscale.com/installer-api/get-org-org-id-webhooks-hook-id
+      parameters:
+      - name: orgid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: hookid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    DeleteOrgOrgidResponse:
+      type: object
+      properties:
+        status:
+          type: object
+          description: Status object containing i18n_message and message.
+        response:
+          type: object
+          description: Response object containing id and name of the organization.
+    GetApi10OrgDefaultDefaultidResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+    PostOrgResponse:
+      type: object
+      properties:
+        status:
+          type: object
+          description: Status object containing i18n_message and message
+        response:
+          type: object
+          description: Response object containing id and name of the created organization
+    PostOrgOrgidResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Success.
+        '401':
+          type: string
+          description: This error will occur if calling user does not have access right for the API.
+        '404':
+          type: string
+          description: This error will occur if the org identified by orgId does not exist.
+        '500':
+          type: string
+          description: A server error occurred. Check the logs for more details.
+    DeleteOrgOrgidWebhooksHookidResponse:
+      type: object
+      properties:
+        status:
+          type: object
+          description: Status object containing code and messages.
+        response:
+          type: object
+          description: Response payload, includes id of the webhook.
+        time_to_process:
+          type: string
+          description: Processing time.
+    PostOrgOrgidWebhooksResponse:
+      type: object
+      properties:
+        status:
+          type: object
+          description: Contains code, i18n_message, and message.
+        response:
+          type: object
+          description: Contains the created webhook id.
+        time_to_process:
+          type: string
+          description: Processing time.
+    PostOrgOrgidRequest:
+      type: object
+      properties:
+        body:
+          type: string
+          description: application/json Body
+      required:
+      - body
+    GetOrgResponse:
+      type: object
+      properties:
+        status:
+          type: object
+          description: Contains i18n_message and message.
+        response:
+          type: array
+          description: Array of organization objects.
+    PostOrgOrgidWebhooksRequest:
+      type: object
+      properties:
+        org_id:
+          type: string
+        notification_type:
+          type: string
+        url:
+          type: string
+        project_id:
+          type: string
+      required:
+      - org_id
+      - notification_type
+      - url
+      - project_id
+    GetOrgOrgidWebhooksResponse:
+      type: object
+      properties:
+        status:
+          type: object
+          description: Response status object
+        response:
+          type: object
+          description: Payload containing webhook data
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
