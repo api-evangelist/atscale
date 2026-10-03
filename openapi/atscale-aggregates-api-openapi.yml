@@ -294,6 +294,12 @@ paths:
         kind: documentation
 components:
   schemas:
+    DeleteV1AggregatesDefinitionsDefinitionidResponse:
+      type: object
+      properties:
+        deleted:
+          type: boolean
+          description: Indicates if the aggregate definition was deleted
     PostV1AggregatesImportCatalogsCatalogidModelsModelidResponse:
       type: object
       properties:
@@ -318,18 +324,6 @@ components:
         aggregates:
           type: object
           description: Contains count and values arrays.
-    DeleteV1AggregatesDefinitionsDefinitionidResponse:
-      type: object
-      properties:
-        deleted:
-          type: boolean
-          description: Indicates if the aggregate definition was deleted
-    PutV1AggregatesDefinitionsDefinitionidDefinitionididResponse:
-      type: object
-      properties:
-        blocked:
-          type: boolean
-          description: Indicates the aggregate definition is blocked.
     GetV1AggregatesExportCatalogsCatalogidModelsModelidResponse:
       type: object
       properties:
@@ -351,20 +345,6 @@ components:
         aggregates:
           type: object
           description: Aggregate Definitions. For internal use only.
-    GetV1AggregatesInstancesResponse:
-      type: object
-      properties:
-        data:
-          type: array
-          description: Array with aggregate instances
-        total:
-          type: number
-        size:
-          type: number
-        page:
-          type: number
-        offset:
-          type: number
     PutV1AggregatesDefinitionsDefinitionidDefinitionididRequest:
       type: object
       properties:
@@ -381,6 +361,26 @@ components:
           description: Object matching the export schema.
       required:
       - aggregates
+    PutV1AggregatesDefinitionsDefinitionidDefinitionididResponse:
+      type: object
+      properties:
+        blocked:
+          type: boolean
+          description: Indicates the aggregate definition is blocked.
+    GetV1AggregatesInstancesResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          description: Array with aggregate instances
+        total:
+          type: number
+        size:
+          type: number
+        page:
+          type: number
+        offset:
+          type: number
   securitySchemes:
     bearer:
       type: http

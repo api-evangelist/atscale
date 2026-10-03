@@ -28,7 +28,18 @@
     "atscale-openapi-generated.yml: tagged paths GET /v1/{v1id} -> Atscale API",
     "atscale-openapi-generated.yml: tagged paths POST /v1/{v1id} -> Atscale API",
     "atscale-openapi-generated.yml: declared missing tag: Atscale API",
-    "apis.yml register: written (+10 apis, 11 total)"
+    "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "atscale-aggregates-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atscale-atscale-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atscale-catalogs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atscale-data-warehouses-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atscale-default-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atscale-org-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atscale-orgs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atscale-query-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atscale-sessiontoken-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atscale-soap-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

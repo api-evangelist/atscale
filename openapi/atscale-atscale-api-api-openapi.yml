@@ -173,30 +173,6 @@ paths:
         collapsed_from: 3 example path(s) differing only at v1Id
 components:
   schemas:
-    PostV1V1IdResponse:
-      type: object
-      properties:
-        query-id:
-          type: string
-          description: 'Possible values: non-empty'
-        metadata:
-          type: object
-        metadata.succeeded:
-          type: boolean
-        metadata.wall-time:
-          type: number
-        metadata.error-message:
-          type: string
-        metadata.columns:
-          type: array
-        metadata.columns[].type:
-          type: string
-          description: 'Possible values: non-empty'
-        metadata.columns[].name:
-          type: string
-          description: 'Possible values: non-empty'
-        data:
-          type: array
     PostV1V1IdRequest:
       type: object
       properties:
@@ -251,6 +227,30 @@ components:
       - aggregation
       - useAggregates
       - genAggregates
+    PostV1V1IdResponse:
+      type: object
+      properties:
+        query-id:
+          type: string
+          description: 'Possible values: non-empty'
+        metadata:
+          type: object
+        metadata.succeeded:
+          type: boolean
+        metadata.wall-time:
+          type: number
+        metadata.error-message:
+          type: string
+        metadata.columns:
+          type: array
+        metadata.columns[].type:
+          type: string
+          description: 'Possible values: non-empty'
+        metadata.columns[].name:
+          type: string
+          description: 'Possible values: non-empty'
+        data:
+          type: array
   securitySchemes:
     bearer:
       type: http
