@@ -28,6 +28,12 @@ tags:
 - Analytics
 - Business Intelligence
 - Data Integration
+- Artificial Intelligence
+- Semantic Layer
+tags_raw:
+- Analytics
+- Business Intelligence
+- Data Integration
 - AI
 - Semantic Layer
 
@@ -151,6 +157,8 @@ apis:
   humanURL: https://documentation.atscale.com/container/atscale
   baseURL: http://atscale-node-01.docker.infra.atscale.com:10500
   tags:
+  - Catalog
+  tags_raw:
   - Catalogs
   properties:
   - type: OpenAPI
@@ -198,7 +206,8 @@ apis:
   description: The Default API from Atscale — 1 operation(s) for default.
   humanURL: https://documentation.atscale.com/container/atscale
   baseURL: http://atscale-node-01.docker.infra.atscale.com:10500
-  tags:
+  tags: []
+  tags_raw:
   - Default
   properties:
   - type: OpenAPI
@@ -247,6 +256,8 @@ apis:
   humanURL: https://documentation.atscale.com/container/atscale
   baseURL: http://atscale-node-01.docker.infra.atscale.com:10500
   tags:
+  - Organization
+  tags_raw:
   - Orgs
   properties:
   - type: OpenAPI
@@ -295,6 +306,8 @@ apis:
   humanURL: https://documentation.atscale.com/container/atscale
   baseURL: http://atscale-node-01.docker.infra.atscale.com:10500
   tags:
+  - Session Token
+  tags_raw:
   - Sessiontoken
   properties:
   - type: OpenAPI
@@ -319,6 +332,8 @@ apis:
   humanURL: https://documentation.atscale.com/container/atscale
   baseURL: http://atscale-node-01.docker.infra.atscale.com:10500
   tags:
+  - SOAP
+  tags_raw:
   - Soap
   properties:
   - type: OpenAPI
