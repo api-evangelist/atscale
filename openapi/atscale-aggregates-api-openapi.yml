@@ -294,12 +294,36 @@ paths:
         kind: documentation
 components:
   schemas:
-    DeleteV1AggregatesDefinitionsDefinitionidResponse:
+    PostV1AggregatesImportCatalogsCatalogidModelsModelidRequest:
       type: object
       properties:
-        deleted:
+        aggregates:
+          type: object
+          description: Object matching the export schema.
+      required:
+      - aggregates
+    GetV1AggregatesInstancesResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          description: Array with aggregate instances
+        total:
+          type: number
+        size:
+          type: number
+        page:
+          type: number
+        offset:
+          type: number
+    PutV1AggregatesDefinitionsDefinitionidDefinitionididRequest:
+      type: object
+      properties:
+        blocked:
           type: boolean
-          description: Indicates if the aggregate definition was deleted
+          description: Blocks the specified aggregate definition.
+      required:
+      - blocked
     PostV1AggregatesImportCatalogsCatalogidModelsModelidResponse:
       type: object
       properties:
@@ -324,6 +348,12 @@ components:
         aggregates:
           type: object
           description: Contains count and values arrays.
+    PutV1AggregatesDefinitionsDefinitionidDefinitionididResponse:
+      type: object
+      properties:
+        blocked:
+          type: boolean
+          description: Indicates the aggregate definition is blocked.
     GetV1AggregatesExportCatalogsCatalogidModelsModelidResponse:
       type: object
       properties:
@@ -345,42 +375,12 @@ components:
         aggregates:
           type: object
           description: Aggregate Definitions. For internal use only.
-    PutV1AggregatesDefinitionsDefinitionidDefinitionididRequest:
+    DeleteV1AggregatesDefinitionsDefinitionidResponse:
       type: object
       properties:
-        blocked:
+        deleted:
           type: boolean
-          description: Blocks the specified aggregate definition.
-      required:
-      - blocked
-    PostV1AggregatesImportCatalogsCatalogidModelsModelidRequest:
-      type: object
-      properties:
-        aggregates:
-          type: object
-          description: Object matching the export schema.
-      required:
-      - aggregates
-    PutV1AggregatesDefinitionsDefinitionidDefinitionididResponse:
-      type: object
-      properties:
-        blocked:
-          type: boolean
-          description: Indicates the aggregate definition is blocked.
-    GetV1AggregatesInstancesResponse:
-      type: object
-      properties:
-        data:
-          type: array
-          description: Array with aggregate instances
-        total:
-          type: number
-        size:
-          type: number
-        page:
-          type: number
-        offset:
-          type: number
+          description: Indicates if the aggregate definition was deleted
   securitySchemes:
     bearer:
       type: http

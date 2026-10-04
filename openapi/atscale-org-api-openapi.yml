@@ -318,15 +318,6 @@ paths:
         kind: documentation
 components:
   schemas:
-    DeleteOrgOrgidResponse:
-      type: object
-      properties:
-        status:
-          type: object
-          description: Status object containing i18n_message and message.
-        response:
-          type: object
-          description: Response object containing id and name of the organization.
     DeleteOrgOrgidWebhooksHookidResponse:
       type: object
       properties:
@@ -339,37 +330,6 @@ components:
         time_to_process:
           type: string
           description: Processing time.
-    PostOrgOrgidResponse:
-      type: object
-      properties:
-        '200':
-          type: string
-          description: Success.
-        '401':
-          type: string
-          description: This error will occur if calling user does not have access right for the API.
-        '404':
-          type: string
-          description: This error will occur if the org identified by orgId does not exist.
-        '500':
-          type: string
-          description: A server error occurred. Check the logs for more details.
-    GetApi10OrgDefaultDefaultidResponse:
-      type: object
-      properties:
-        id:
-          type: string
-        name:
-          type: string
-    GetOrgResponse:
-      type: object
-      properties:
-        status:
-          type: object
-          description: Contains i18n_message and message.
-        response:
-          type: array
-          description: Array of organization objects.
     GetOrgOrgidWebhooksResponse:
       type: object
       properties:
@@ -395,6 +355,45 @@ components:
       - notification_type
       - url
       - project_id
+    GetApi10OrgDefaultDefaultidResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+    DeleteOrgOrgidResponse:
+      type: object
+      properties:
+        status:
+          type: object
+          description: Status object containing i18n_message and message.
+        response:
+          type: object
+          description: Response object containing id and name of the organization.
+    PostOrgOrgidResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Success.
+        '401':
+          type: string
+          description: This error will occur if calling user does not have access right for the API.
+        '404':
+          type: string
+          description: This error will occur if the org identified by orgId does not exist.
+        '500':
+          type: string
+          description: A server error occurred. Check the logs for more details.
+    PostOrgOrgidRequest:
+      type: object
+      properties:
+        body:
+          type: string
+          description: application/json Body
+      required:
+      - body
     PostOrgOrgidWebhooksResponse:
       type: object
       properties:
@@ -416,14 +415,15 @@ components:
         response:
           type: object
           description: Response object containing id and name of the created organization
-    PostOrgOrgidRequest:
+    GetOrgResponse:
       type: object
       properties:
-        body:
-          type: string
-          description: application/json Body
-      required:
-      - body
+        status:
+          type: object
+          description: Contains i18n_message and message.
+        response:
+          type: array
+          description: Array of organization objects.
   securitySchemes:
     bearer:
       type: http

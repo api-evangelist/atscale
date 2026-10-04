@@ -159,24 +159,6 @@ paths:
         kind: documentation
 components:
   schemas:
-    PostV1CatalogsDeployResponse:
-      type: object
-      properties:
-        catalogId:
-          type: string
-          description: required
-        tableau:
-          type: object
-          description: Array of tableau deployment results
-        compilationWarnings:
-          type: object
-          description: Compilation warnings details
-    PostV1CatalogsCatalogidModelsModelidAggregatesCreationAggreg:
-      type: object
-      properties:
-        success:
-          type: boolean
-          description: Success indicator.
     PostV1CatalogsDeployRequest:
       type: object
       properties:
@@ -198,6 +180,24 @@ components:
       required:
       - repoUrl
       - gitToken
+    PostV1CatalogsDeployResponse:
+      type: object
+      properties:
+        catalogId:
+          type: string
+          description: required
+        tableau:
+          type: object
+          description: Array of tableau deployment results
+        compilationWarnings:
+          type: object
+          description: Compilation warnings details
+    PostV1CatalogsCatalogidModelsModelidAggregatesCreationAggreg:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Success indicator.
   securitySchemes:
     bearer:
       type: http
