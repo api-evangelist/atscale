@@ -1,0 +1,37 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://www.atscale.com/pricing/
+sources:
+- https://www.atscale.com/pricing/
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: usage-other
+delivery:
+  delivery: unclear
+  method: page
+  read: '2026-10-07'
+published: false
+note: No numeric price is published on the pricing page; Pricing page describes a consumption model based
+  on deployed semantic objects (DSOs) measured monthly, with Standard and Enterprise editions and volume
+  discounts, but shows no numeric prices. The only dollar figures ($17.93 / $0.0008) are from a customer
+  AI benchmark case study banner, not AtScale pricing.
+plan_count: 2
+plans:
+- name: Standard
+  price_text: Consumption-based pricing aligned to deployed value
+  period: none
+  unit: deployed semantic object (DSO)
+  included_quota: Semantic models and connectivity to BI tools
+  overage: If your organization expands beyond your contracted deployment, your account team will help
+    you figure out the right adjustment.
+- name: Enterprise
+  price_text: Consumption-based pricing aligned to deployed value
+  period: none
+  unit: deployed semantic object (DSO)
+  included_quota: Broader integrations, enterprise governance, and support for large-scale semantic deployments
+  overage: If your organization expands beyond your contracted deployment, your account team will help
+    you figure out the right adjustment.
