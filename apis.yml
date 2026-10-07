@@ -44,6 +44,8 @@ maintainers:
   email: info@apis.io
 
 common:
+- type: Plans
+  url: plans/atscale-plans-pricing.yml
 - url: https://www.atscale.com/feed/
   type: BlogRSS
 - type: Spectral
