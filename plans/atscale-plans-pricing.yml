@@ -35,3 +35,26 @@ plans:
   included_quota: Broader integrations, enterprise governance, and support for large-scale semantic deployments
   overage: If your organization expands beyond your contracted deployment, your account team will help
     you figure out the right adjustment.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - metered
+  units: []
+  plans:
+  - name: Standard
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - other
+    periods:
+    - none
+  - name: Enterprise
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - other
+    periods:
+    - none
