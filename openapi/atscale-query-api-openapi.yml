@@ -86,15 +86,6 @@ paths:
         kind: documentation
 components:
   schemas:
-    PostV1QueryPlanResponse:
-      type: object
-      properties:
-        queryId:
-          type: string
-          description: 'Possible values: non-empty'
-        outboundQuery:
-          type: string
-          description: 'Possible values: non-empty'
     PostV1QueryPlanRequest:
       type: object
       properties:
@@ -115,6 +106,15 @@ components:
       - query
       - catalogId
       - timeout
+    PostV1QueryPlanResponse:
+      type: object
+      properties:
+        queryId:
+          type: string
+          description: 'Possible values: non-empty'
+        outboundQuery:
+          type: string
+          description: 'Possible values: non-empty'
   securitySchemes:
     bearer:
       type: http

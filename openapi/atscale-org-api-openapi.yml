@@ -318,18 +318,15 @@ paths:
         kind: documentation
 components:
   schemas:
-    DeleteOrgOrgidWebhooksHookidResponse:
+    DeleteOrgOrgidResponse:
       type: object
       properties:
         status:
           type: object
-          description: Status object containing code and messages.
+          description: Status object containing i18n_message and message.
         response:
           type: object
-          description: Response payload, includes id of the webhook.
-        time_to_process:
-          type: string
-          description: Processing time.
+          description: Response object containing id and name of the organization.
     GetOrgOrgidWebhooksResponse:
       type: object
       properties:
@@ -339,6 +336,14 @@ components:
         response:
           type: object
           description: Payload containing webhook data
+    PostOrgOrgidRequest:
+      type: object
+      properties:
+        body:
+          type: string
+          description: application/json Body
+      required:
+      - body
     PostOrgOrgidWebhooksRequest:
       type: object
       properties:
@@ -355,22 +360,6 @@ components:
       - notification_type
       - url
       - project_id
-    GetApi10OrgDefaultDefaultidResponse:
-      type: object
-      properties:
-        id:
-          type: string
-        name:
-          type: string
-    DeleteOrgOrgidResponse:
-      type: object
-      properties:
-        status:
-          type: object
-          description: Status object containing i18n_message and message.
-        response:
-          type: object
-          description: Response object containing id and name of the organization.
     PostOrgOrgidResponse:
       type: object
       properties:
@@ -386,14 +375,43 @@ components:
         '500':
           type: string
           description: A server error occurred. Check the logs for more details.
-    PostOrgOrgidRequest:
+    DeleteOrgOrgidWebhooksHookidResponse:
       type: object
       properties:
-        body:
+        status:
+          type: object
+          description: Status object containing code and messages.
+        response:
+          type: object
+          description: Response payload, includes id of the webhook.
+        time_to_process:
           type: string
-          description: application/json Body
-      required:
-      - body
+          description: Processing time.
+    GetOrgResponse:
+      type: object
+      properties:
+        status:
+          type: object
+          description: Contains i18n_message and message.
+        response:
+          type: array
+          description: Array of organization objects.
+    PostOrgResponse:
+      type: object
+      properties:
+        status:
+          type: object
+          description: Status object containing i18n_message and message
+        response:
+          type: object
+          description: Response object containing id and name of the created organization
+    GetApi10OrgDefaultDefaultidResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
     PostOrgOrgidWebhooksResponse:
       type: object
       properties:
@@ -406,24 +424,6 @@ components:
         time_to_process:
           type: string
           description: Processing time.
-    PostOrgResponse:
-      type: object
-      properties:
-        status:
-          type: object
-          description: Status object containing i18n_message and message
-        response:
-          type: object
-          description: Response object containing id and name of the created organization
-    GetOrgResponse:
-      type: object
-      properties:
-        status:
-          type: object
-          description: Contains i18n_message and message.
-        response:
-          type: array
-          description: Array of organization objects.
   securitySchemes:
     bearer:
       type: http

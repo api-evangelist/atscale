@@ -294,36 +294,27 @@ paths:
         kind: documentation
 components:
   schemas:
-    PostV1AggregatesImportCatalogsCatalogidModelsModelidRequest:
+    GetV1AggregatesExportCatalogsCatalogidModelsModelidResponse:
       type: object
       properties:
+        atScaleExportVersion:
+          type: string
+          description: The AtScale system version from which the export originated.
+        exportSummary:
+          type: object
+          description: Summarized information such as aggregate count, grouped by Connection ID.
+        exportTimestamp:
+          type: string
+          description: Server-generated timestamp the export file was generated.
+        exportCatalogId:
+          type: string
+          description: catalog ID
+        exportModelId:
+          type: string
+          description: Model ID. Must exist on the target system.
         aggregates:
           type: object
-          description: Object matching the export schema.
-      required:
-      - aggregates
-    GetV1AggregatesInstancesResponse:
-      type: object
-      properties:
-        data:
-          type: array
-          description: Array with aggregate instances
-        total:
-          type: number
-        size:
-          type: number
-        page:
-          type: number
-        offset:
-          type: number
-    PutV1AggregatesDefinitionsDefinitionidDefinitionididRequest:
-      type: object
-      properties:
-        blocked:
-          type: boolean
-          description: Blocks the specified aggregate definition.
-      required:
-      - blocked
+          description: Aggregate Definitions. For internal use only.
     PostV1AggregatesImportCatalogsCatalogidModelsModelidResponse:
       type: object
       properties:
@@ -354,27 +345,36 @@ components:
         blocked:
           type: boolean
           description: Indicates the aggregate definition is blocked.
-    GetV1AggregatesExportCatalogsCatalogidModelsModelidResponse:
+    GetV1AggregatesInstancesResponse:
       type: object
       properties:
-        atScaleExportVersion:
-          type: string
-          description: The AtScale system version from which the export originated.
-        exportSummary:
-          type: object
-          description: Summarized information such as aggregate count, grouped by Connection ID.
-        exportTimestamp:
-          type: string
-          description: Server-generated timestamp the export file was generated.
-        exportCatalogId:
-          type: string
-          description: catalog ID
-        exportModelId:
-          type: string
-          description: Model ID. Must exist on the target system.
+        data:
+          type: array
+          description: Array with aggregate instances
+        total:
+          type: number
+        size:
+          type: number
+        page:
+          type: number
+        offset:
+          type: number
+    PutV1AggregatesDefinitionsDefinitionidDefinitionididRequest:
+      type: object
+      properties:
+        blocked:
+          type: boolean
+          description: Blocks the specified aggregate definition.
+      required:
+      - blocked
+    PostV1AggregatesImportCatalogsCatalogidModelsModelidRequest:
+      type: object
+      properties:
         aggregates:
           type: object
-          description: Aggregate Definitions. For internal use only.
+          description: Object matching the export schema.
+      required:
+      - aggregates
     DeleteV1AggregatesDefinitionsDefinitionidResponse:
       type: object
       properties:
