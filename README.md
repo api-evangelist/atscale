@@ -64,5 +64,129 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Atscale is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/atscale
+AtScale provides a semantic layer platform that enables enterprises to unify data across data warehouses, data lakes, and cloud services, delivering AI‑powered analytics, business intelligence, and data governance. Their solution supports integrations with Snowflake, Databricks, Google BigQuery, Amazon Redshift, Microsoft Azure, and many other platforms, helping organizations to build a trusted analytics foundation for AI and BI workloads.
+
+**Areas:** Analytics · Business Intelligence · Data Integration · Artificial Intelligence · Semantic Layer
+
+## Atscale on APIs.io
+
+Everything profiled for Atscale is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/atscale/](https://apis.io/providers/atscale/)** — or go straight to one of the APIs or properties below.
+
+### APIs (11)
+
+- [AtScale API](https://apis.io/apis/atscale/atscale-api-2/) — API documentation is available but no machine‑readable contract was found.
+- [Atscale Aggregates API](https://apis.io/apis/atscale/atscale-aggregates-api/) — The Aggregates API from Atscale — 5 operation(s) for aggregates.
+- [Atscale Atscale API](https://apis.io/apis/atscale/atscale-atscale-api-api/) — The Atscale API API from Atscale — 2 operation(s) for atscale api.
+- [Atscale Catalogs API](https://apis.io/apis/atscale/atscale-catalogs-api/) — The Catalogs API from Atscale — 3 operation(s) for catalogs.
+- [Atscale Data Warehouses API](https://apis.io/apis/atscale/atscale-data-warehouses-api/) — The Data Warehouses API from Atscale — 1 operation(s) for data warehouses.
+- [Atscale Default API](https://apis.io/apis/atscale/atscale-default-api/) — The Default API from Atscale — 1 operation(s) for default.
+- [Atscale Org API](https://apis.io/apis/atscale/atscale-org-api/) — The Org API from Atscale — 7 operation(s) for org.
+- [Atscale Orgs API](https://apis.io/apis/atscale/atscale-orgs-api/) — The Orgs API from Atscale — 1 operation(s) for orgs.
+- [Atscale Query API](https://apis.io/apis/atscale/atscale-query-api/) — The Query API from Atscale — 1 operation(s) for query.
+- [Atscale Sessiontoken API](https://apis.io/apis/atscale/atscale-sessiontoken-api/) — The Sessiontoken API from Atscale — 1 operation(s) for sessiontoken.
+- [Atscale Soap API](https://apis.io/apis/atscale/atscale-soap-api/) — The Soap API from Atscale — 1 operation(s) for soap.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [GetV1AggregatesExportCatalogsCatalogidModelsModelidResponse](https://apis.io/schemas/atscale/atscale-get-v1-aggregates-export-catalogs-catalogid-models-modelid-response/)
+- [GetV1DataWarehousesDatawarehouseidIdResponse](https://apis.io/schemas/atscale/atscale-get-v1-data-warehouses-datawarehouseid-id-response/)
+- [PostOrgOrgidResponse](https://apis.io/schemas/atscale/atscale-post-org-orgid-response/)
+- [PostV1AggregatesImportCatalogsCatalogidModelsModelidResponse](https://apis.io/schemas/atscale/atscale-post-v1-aggregates-import-catalogs-catalogid-models-modelid-response/)
+- [PostV1V1IdRequest](https://apis.io/schemas/atscale/atscale-post-v1-v1-id-request/)
+- [PostV1V1IdResponse](https://apis.io/schemas/atscale/atscale-post-v1-v1-id-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Atscale Context](https://apis.io/jsonld/atscale/atscale-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Atscale API Rules](https://apis.io/rules/atscale/atscale-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Atscale Domain Security](https://apis.io/security/atscale/atscale-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Atscale Plans Pricing](https://apis.io/plans/atscale/atscale-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.atscale.com)
+- [Documentation](https://documentation.atscale.com/)
+- [Getting started](https://help.atscale.com/kb/what-access-is-needed-in-sentry-for-impala-if-udf-schema-override-is-setup-in-atscale)
+- [Pricing](https://www.atscale.com/pricing/)
+- [Support](https://help.atscale.com/)
+- [Changelog](https://documentation.atscale.com/container/release-notes)
+- [Blog](https://www.atscale.com/blog/)
+- [Privacy policy](https://www.atscale.com/privacy/)
+
+## API Evangelist rating
+
+**Kin Score 33.3** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 26.8 |
+| Contract governance | 22.0 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 35.7 |
+| Access clarity | 42.1 |
+
+**Agent readiness 18.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | partial |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/atscale/](https://apis.io/providers/atscale/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Atscale: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/atscale/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
